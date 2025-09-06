@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="profile-page-container">
+        <div class="auth-form profile-container">
+            <h2 id="profileHeader">Профиль</h2>
+            <form id="profileForm">
+                <div id="profile-success-message" class="success-message"></div>
+                <div id="profile-error-message" class="error-message"></div>
+
+                <label for="profileFullName">Полное имя:</label>
+                <input type="text" id="profileFullName" placeholder="Полное имя" required>
+
+                <label for="profileEmail">Email:</label>
+                <input type="email" id="profileEmail" placeholder="Email" required>
+
+                <button type="submit">Сохранить изменения</button>
+            </form>
+            <button id="logoutButton">Выйти</button>
+            <p><a href="/chat" style="text-decoration: none; margin-top: 1rem; display: inline-block;">Вернуться в чат</a></p>
+        </div>
+    </div>
+    <script src="/static/js/profile.js"></script>
+</body>
+</html>

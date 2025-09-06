@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Чат</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="chat-page-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-header-left">
+                    <h2>Чаты</h2>
+                    <button id="themeToggleBtn" class="icon-btn">☀️</button>
+                </div>
+                <a href="/profile" class="profile-button">Профиль</a>
+            </div>
+            <div class="chat-list" id="chatList">
+                </div>
+            <div class="sidebar-footer">
+                <button id="createChatBtn" class="action-btn">Новый чат</button>
+                <button id="createRoleChatBtn" class="action-btn">Чат по роли</button>
+            </div>
+        </aside>
+
+        <main class="chat-window">
+            <div class="chat-header" id="chatHeader">
+                Выберите чат для начала общения
+            </div>
+            <div class="messages-area" id="messagesArea">
+                </div>
+            <div class="message-input-area" id="messageInputArea" style="display: none;">
+                <input type="text" id="messageInput" placeholder="Введите сообщение...">
+                <button id="sendButton">Отправить</button>
+            </div>
+        </main>
+    </div>
+
+    <div id="createChatModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Создать новый чат</h3>
+            <input type="text" id="groupNameInput" placeholder="Название группового чата (необязательно)">
+            <h4>Выберите участников:</h4>
+            <div id="userList" class="user-list-container"></div>
+            <button id="confirmCreateChatBtn" class="action-btn">Создать</button>
+        </div>
+    </div>
+
+    <div id="createRoleChatModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Создать чат по роли</h3>
+            <input type="text" id="roleGroupNameInput" placeholder="Название чата" required>
+            <select id="roleSelect" required>
+                 <option value="Студент" selected>Чат для студентов</option>
+                 <option value="Преподаватель">Чат для преподавателей</option>
+            </select>
+            <button id="confirmCreateRoleChatBtn" class="action-btn">Создать</button>
+        </div>
+    </div>
+
+
+    <script src="/static/js/chat.js"></script>
+</body>
+</html>

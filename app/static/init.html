@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чат</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Чат</h1>
+        <button id="themeToggle">🌙 Темная тема</button>
+        <div class="profile-section">
+            <a href="/profile">Профиль</a>
+            <a href="/logout">Выйти</a>
+        </div>
+    </header>
+    <main>
+        <section id="authSection">
+            <h2>Авторизация</h2>
+            <form id="loginForm">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+        </section>
+
+        <section id="chatSection" style="display: none;">
+            <div class="chat-container">
+                <div class="chat-list">
+                    <h3>Личные чаты</h3>
+                    <ul id="privateChats"></ul>
+                    <h3>Групповые чаты</h3>
+                    <ul id="groupChats"></ul>
+                </div>
+                <div class="chat-window">
+                    <div id="messages"></div>
+                    <input type="text" id="messageInput" placeholder="Введите сообщение...">
+                    <button onclick="sendMessage()">Отправить</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/static/script.js"></script>
+</body>
+</html>

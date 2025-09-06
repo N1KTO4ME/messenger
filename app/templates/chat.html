@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Чаты</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/styles.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+       <header>
+            <h2>Чат <span id="currentUser"></span></h2>
+            <button id="themeToggle">🌙 Темная тема</button>
+            <button id="logoutButton">🚪 Выйти</button>
+       </header>
+
+        <div>
+            <label>Выберите чат:</label>
+            <select id="userList" onchange="connect()">
+                <option value="global">🌍 Общий чат</option>
+            </select>
+        </div>
+
+        <div id="chatBox" class="chat-box"></div>
+
+        <input type="text" id="messageInput" placeholder="Введите сообщение...">
+        <button onclick="sendMessage()">Отправить</button>
+    </div>
+
+<!--    <script src="{{ url_for('static', path='/chat.js') }}"></script>-->
+    <script src="/static/chat.js"></script>
+</body>
+</html>
